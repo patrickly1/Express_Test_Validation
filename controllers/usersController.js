@@ -41,7 +41,7 @@ exports.usersCreatePost = [
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
             return res.status(400).render("createUser", {
-                title: "Crete user", 
+                title: "Create user", 
                 errors: errors.array(),
             });
         }

@@ -10,7 +10,7 @@
             <% users.forEach(user => { %>
                 <li>
                     ID: <%= user.id %>,
-                    
+
                     Name: <%= user.firstName %>
 
                     <%= user.lastName %>
@@ -34,5 +34,12 @@
         <% } %>
     </ul>
     <a href="/create">Create a user</a>
+    <form action="/create" method="POST"></form>
+        <label for="firstName">First Name:</label>
+        <input type="text" name="firstName" id="firstName" required>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required>
+        <button type="submit">Submit</button>
+    </form>
 </body>
 </html>
